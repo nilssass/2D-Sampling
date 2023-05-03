@@ -21,3 +21,8 @@ PATH_OUTPUT:    path to output directory
 These parameters can be set in the bash script. Executing the bash script by `bash make_histograms.sh` will create to files `dNdy.txt` and `dNdEta.txt` containing the corresponding histograms.
 
 ### Plotting the Histograms
+Save the python script `plot_histogram.py` in the same directory as the histogram .txt files and run
+```
+python3 plot_histogram.py
+```
+This will create the plots for the corresponding histograms.
