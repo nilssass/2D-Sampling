@@ -25,4 +25,4 @@ Save the python script `plot_histograms.py` in the same directory as the histogr
 ```
 python3 plot_histograms.py
 ```
-This will create the plots for the corresponding histograms. In order to change the particles plotted, one can change the pdg codes inthe plotting script in line 189 (and 192)
+This will create the plots for the corresponding histograms. In order to change the particles plotted, one can change the pdg codes inthe plotting script in lines 122 and 125. The available particles can be read off the dictionary in line 42.
