@@ -53,73 +53,6 @@ def pdg_to_particle_str(pdg_str):
         }
     return pdg_particle_list[pdg_str]
 
-#   From ChatGpt:
-#    
-#   def plot(data, pdg, OUTPUT_FILE=False, figsize=(10, 6)):
-#     """
-#     Plot histogram for given PDG code or list/tuple of PDG codes from data.
-    
-#     Args:
-#         data (numpy.ndarray): Data array containing histograms.
-#         pdg (str, list, tuple): PDG code or list/tuple of PDG codes to plot.
-#         OUTPUT_FILE (str, optional): File name to save the plot. Default is False.
-#         figsize (tuple, optional): Figure size as (width, height). Default is (10, 6).
-#     """
-    
-#     if isinstance(pdg, (str, list, tuple)):
-#         if isinstance(pdg, str):
-#             pdg = [pdg]
-#         elif isinstance(pdg, (list, tuple)):
-#             if not all(isinstance(item, str) for item in pdg):
-#                 raise ValueError("PDG codes must be strings.")
-        
-#         header = get_data_header(data)
-#         bins = get_bin_positions(data)
-#         hist = get_histograms(data)
-#         colors = get_colors(pdg)
-        
-#         plt.figure(figsize=figsize)
-#         for particle, color in zip(pdg, colors):
-#             particle_index = header.index(particle)
-#             error_index = particle_index + 1
-            
-#             hist_particle = hist[:, particle_index]
-#             err_particle = hist[:, error_index]
-             
-#             particle_label = pdg_to_particle_str(particle)
-#             plt.plot(bins, hist_particle, c=color, label=particle_label, linewidth=2.0)
-#             plt.fill_between(bins, hist_particle-err_particle, hist_particle+err_particle, color=color, alpha=0.4)
-            
-#         plt.grid(True,alpha=0.4)
-#         plt.legend()
-        
-#         # Save Plot
-#         if OUTPUT_FILE == False:
-#             plt.savefig('plot.png', dpi=300)
-#         else:
-#             plt.savefig(OUTPUT_FILE, dpi=300)
-#     else:
-#         raise ValueError("PDG code must be a string or a list/tuple of strings.")
-        
-        
-# def get_colors(pdg):
-#     """
-#     Get colors for PDG codes.
-    
-#     Args:
-#         pdg (list, tuple): List/tuple of PDG codes.
-        
-#     Returns:
-#         list: List of colors.
-#     """
-#     colors = []
-#     if len(pdg) <= 4:
-#         colors = ["#0A3C62","#4F7772","#94B282","#D9ED92"]
-#     elif len(pdg) <= 6:
-        
-        
-
-
 def plot(data, pdg, OUTPUT_FILE=False):
     
     if isinstance(pdg, str):
@@ -189,4 +122,4 @@ dNdy = load(FILE_INPUT_DNDY)
 plot(dNdy, ('111', '211', '-211'), './dNdy')
 
 dNdEta = load(FILE_INPUT_DNDETA)
-#plot(dNdEta, ('2212', '111', '211'), './dNdEta')
+plot(dNdEta, ('2212', '111', '211'), './dNdEta')
