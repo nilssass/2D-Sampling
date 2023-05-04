@@ -17,7 +17,7 @@ The sampler will take the central cell of vHLLE and expand it continuously in et
 in lines 268-269 of `smash-hadron-sampler/src/gen.cpp`
 
 ### Creating Rapidity and Spacetime Rapidity Spectra
-From the .oscar output of the sampler the dN/dy and dN/dEta spectra can be created with the bash script `make_histograms.sh` which automatically calls the `y_eta_spectra.py` script with 5 arguments as
+From the .oscar output of the sampler (find a test output file in ./data/particle_lists.oscar) the dN/dy and dN/dEta spectra can be created with the bash script `make_histograms.sh` which automatically calls the `y_eta_spectra.py` script with 5 arguments as
 ```
 python3 [path_to_script]/y_eta_spectra.py hist_min hist_max num_bins PATH_OSCAR PATH_OUTPUT
 ```
