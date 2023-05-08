@@ -1,0 +1,26 @@
+eosType       1
+eosTypeHadron 1
+
+etaS      0.2     # to be updated
+zetaS     0.0
+e_crit    0.5
+
+nx        201
+ny        201
+nz        7
+xmin     -20.0
+xmax      20.0
+ymin     -20.0
+ymax      20.0
+etamin   -0.075
+etamax    0.075
+
+tauGridResize 20.0
+
+icModel    6
+Rg      1.4      # to be updated
+Rgz     1.0      # to be updated
+
+tau0       2.7842
+tauMax     25.0
+dtau       0.05
